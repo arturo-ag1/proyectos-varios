@@ -1,0 +1,324 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SGOS</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{% static 'vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{% static 'build/css/custom.min.css' %}" rel="stylesheet">
+-->
+<link href='https://unpkg.com/fullcalendar@3.10.1/dist/fullcalendar.min.css' rel='stylesheet' />
+<link href='https://fullcalendar.io/js/fullcalendar-3.4.0/fullcalendar.css' rel='stylesheet' />
+<link href='https://unpkg.com/fullcalendar@3.10.1/dist/fullcalendar.print.css' rel='stylesheet' media='print' />
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="/blog/main" class="site_title"><i class="fa fa-paw"></i> <span>SGOS</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+          
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home</a></li>
+                  <li><a  href="/blog/usuarios/"><i class="fa fa-user"></i> Usuarios</a></li> 
+                  <li><a  href="/blog/clientes/"><i class="fa fa-user"></i> Clientes</a></li>      
+                  <li><a  href="/blog/sucursales/"><i class="fa fa-user"></i> Sucursales</a></li>    
+                  <li><a  href="/blog/ordenes/"><i class="fa fa-user"></i> Orden de Servicio</a></li>   
+                  <li><a  href="/blog/tecnicos/"><i class="fa fa-user"></i> Técnicos </a></li>     
+                  <li><a  href="/blog/pendientes/"><i class="fa fa-user"></i> Tareas </a></li>        
+                  <li><a  href="/blog/contactos/"><i class="fa fa-user"></i> Contactos </a></li>     
+                  <li><a  href="/blog/estadisticas/"><i class="fa fa-user"></i> Estadísticas </a></li>                     
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+                <nav class="nav navbar-nav">
+                <ul class=" navbar-right">
+                  <li role="presentation" class="nav-item dropdown open">
+                      
+                    <li><a href="/blog/logout"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Calendario</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Buscar</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+                <!--Modal terminar tarea -->
+                
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12  ">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Calendario</h2>
+                        
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                             <div class="row">
+                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                    <div class="white-box">
+                                        <h3 class="box-title m-b-0">CALENDARIO DE ORDENES DE SERVICIO</h3>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div id="calendar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                    <br><br>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+    <script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+    <script src="{% static 'build/js/custom.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'js/axios.min.js' %}"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>   
+    <script src="{% static "plugins/datetime/bootstrap-datetimepicker.js" %}"></script>
+    <script src='https://unpkg.com/moment@2.24.0/min/moment.min.js'></script>
+    <script src='https://unpkg.com/fullcalendar@3.10.1/dist/fullcalendar.min.js'></script>
+    <script src='https://www.unpkg.com/fullcalendar@3.10.1/dist/locale/es.js'></script>
+
+
+
+    <script type="text/javascript">
+
+        $('#datetimepicker5').datetimepicker({
+            minView: 2,
+            autoclose: true,
+            startView: 2,
+            //format: 'yyyy-mm-dd',
+            format: 'dd-mm-yyyy',
+        });
+
+        $('#datetimepicker6').datetimepicker({
+            minView: 2,
+            autoclose: true,
+            startView: 2,
+            //format: 'yyyy-mm-dd',
+            format: 'dd-mm-yyyy',
+        });
+
+        $('#datetimepicker7').datetimepicker({
+            minView: 2,
+            autoclose: true,
+            startView: 2,
+            //format: 'yyyy-mm-dd',
+            format: 'dd-mm-yyyy',
+        });
+        $("#cmdInsert").click(function(){
+            document.location = "/blog/tecnicos/agregar/";
+        });
+
+        function completarTarea(id){
+            idTerminar = id
+            $('#exampleModalTerminar').modal('show');
+        }
+
+        function cancelarTarea(id){
+            idCancelar = id
+            $('#exampleModalCancelar').modal('show');
+        }
+
+        $("#btnCrear").click(function(){
+            $('#exampleModal').modal('show');
+
+            $('#exampleModal button.ok').off().on('click', function() {
+                $.ajax({
+                    type : "GET",
+                    url : '/blog/crearTarea',
+                    data: {
+                        "usuario": $("#usuario").val(),
+                        "tarea": $("#tarea").val(),
+                    },
+                    success: function(data){
+                        if(data.message == "Realizado"){
+                            $('#tabla_clientes').DataTable().ajax.reload()
+                        }
+                        $("#tarea").val("")
+                    },
+                    failure: function(data){
+                    }
+                });
+            });
+        });
+
+        $("#btnGuardarModalTerminar").click(function(){
+            $.ajax({
+                type : "GET",
+                url : '/blog/terminarTarea',
+                data: {
+                    "id": idTerminar,
+                    "comentario": $("#tarea").val(),
+                },
+                success: function(data){
+                    if(data.message == "Realizado"){
+                        $('#tabla_clientes').DataTable().ajax.reload()
+                    }
+                    $("#comentario").val("")
+                },
+                failure: function(data){
+                }
+            });
+        });
+        $("#btnGuardarModalCancelar").click(function(){
+            $.ajax({
+                type : "GET",
+                url : '/blog/cancelarTarea',
+                data: {
+                    "id": idCancelar,
+                },
+                success: function(data){
+                    if(data.message == "Realizado"){
+                        $('#tabla_clientes').DataTable().ajax.reload()
+                    }
+                    $("#comentario").val("")
+                },
+                failure: function(data){
+                }
+            });
+        });
+
+        $("#calendar").fullCalendar({
+                eventLimit: true, // for all non-TimeGrid views
+                  views: {
+                    timeGrid: {
+                      eventLimit: 4 // adjust to 6 only for timeGridWeek/timeGridDay
+                    }
+                  },
+                header: {
+                    left: 'prev,next,today',
+                    center: 'title',
+                    right: 'month,listYear'
+                },
+                eventTextColor: "white",
+                eventOrder:'-start',
+                height: 600,
+                lang: 'es',
+                events: function(start, end, timezone, callback) {
+                    $.ajax({
+                        type : "GET",
+                        url : '/blog/getOrdenes',
+                        data: {
+                            "inicio": start.format(),
+                            "fin": end.format(),
+                            },
+                        success: function(data){
+                            var events = [];
+                            $(data.data).each(function(i,item){
+                                if(item.tipo == "1"){
+                                    events.push({
+                                        id: item.id,
+                                        title: item.folio,
+                                        start: item.fecha,
+                                        end: item.fecha,
+                                        url: "",
+                                        eventTextColor:"#FFFFFF",
+                                        tipo: item.tipo
+                                    })
+                                }
+                                
+                            });
+                            callback(events);
+                        },
+                        failure: function(data){
+                        }
+                    });
+
+                    
+                },
+                eventClick: function(event) {
+                    
+                }
+            })
+
+
+
+        
+
+    </script>
+  </body>
+</html>

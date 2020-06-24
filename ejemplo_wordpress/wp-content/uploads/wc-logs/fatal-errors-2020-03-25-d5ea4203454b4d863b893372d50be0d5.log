@@ -1,0 +1,50 @@
+2020-03-25T02:00:44+00:00 CRITICAL Out of memory (allocated 18874368) (tried to allocate 163840 bytes) en /var/www/html/wp-includes/pomo/mo.php en la línea 297
+
+2020-03-25T02:14:22+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/rest-api/class-wp-rest-server.php en la línea 746
+
+2020-03-25T19:08:39+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 45056 bytes) en /var/www/html/wp-includes/functions.php en la línea 3820
+
+2020-03-25T19:11:05+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 49152 bytes) en /var/www/html/wp-includes/class-wp-customize-manager.php en la línea 2180
+
+2020-03-25T19:14:02+00:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/pomo/mo.php en la línea 323
+
+2020-03-25T19:14:16+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/wp-db.php en la línea 1995
+
+2020-03-25T19:14:35+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 242
+
+2020-03-25T19:14:37+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/pomo/mo.php en la línea 323
+
+2020-03-25T19:19:51+00:00 CRITICAL Out of memory (allocated 10485760) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-customize-control.php en la línea 206
+
+2020-03-25T19:21:01+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 272
+
+2020-03-25T19:21:43+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 196
+
+2020-03-25T19:21:58+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 77
+
+2020-03-25T19:22:34+00:00 CRITICAL Out of memory (allocated 29360128) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 758143802
+
+2020-03-25T19:23:38+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/pomo/mo.php en la línea 323
+
+2020-03-25T19:27:43+00:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-customize-control.php en la línea 206
+
+2020-03-25T19:29:50+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 196
+
+2020-03-25T20:11:22+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 196
+
+2020-03-25T20:12:11+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 77
+
+2020-03-25T20:42:23+00:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-customize-setting.php en la línea 163
+
+2020-03-25T21:23:26+00:00 CRITICAL Out of memory (allocated 12582912) (tried to allocate 163840 bytes) en /var/www/html/wp-includes/plugin.php en la línea 111
+
+2020-03-25T21:23:42+00:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-customize-setting.php en la línea 163
+
+2020-03-25T21:24:45+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 77
+
+2020-03-25T21:24:46+00:00 CRITICAL Out of memory (allocated 8388608) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 77
+
+2020-03-25T21:24:49+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 75
+
+2020-03-25T21:34:49+00:00 CRITICAL Out of memory (allocated 27262976) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-customize-setting.php en la línea 163
+

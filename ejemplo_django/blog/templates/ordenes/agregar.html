@@ -1,0 +1,274 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SGOS </title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{% static 'vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{% static 'build/css/custom.min.css' %}" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>SGOS</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+          
+
+            <br />
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home</a></li>
+                  <li><a  href="/blog/usuarios/"><i class="fa fa-user"></i> Usuarios</a></li> 
+                  <li><a  href="/blog/clientes/"><i class="fa fa-user"></i> Clientes</a></li> 
+                  <li><a  href="/blog/sucursales/"><i class="fa fa-user"></i> Sucursales</a></li> 
+                  <li><a  href="/blog/ordenes/"><i class="fa fa-user"></i> Orden de Servicio</a></li>  
+                  <li><a  href="/blog/tecnicos/"><i class="fa fa-user"></i> Técnicos </a></li>     
+                  <li><a  href="/blog/pendientes/"><i class="fa fa-user"></i> Tareas </a></li>        
+                  <li><a  href="/blog/contactos/"><i class="fa fa-user"></i> Contactos </a></li>     
+                  <li><a  href="/blog/estadisticas/"><i class="fa fa-user"></i> Estadísticas </a></li>               
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+                <nav class="nav navbar-nav">
+                <ul class=" navbar-right">
+                  <li role="presentation" class="nav-item dropdown open">
+                    
+                </ul>
+              </nav>
+            </div>
+          </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Ordenes de Servicio</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Buscar</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12  ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Agregar Orden | Datos Básicos</h2>
+                            
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <form id="form_usuarios" method="post" action="/blog/ordenes/guardar">{% csrf_token %}
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                            <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Folio: <span class="required">*</span></label>
+                                                  <input type="text" id="folio" name="folio" required="required" class="form-control ">
+                                            </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                            <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Descripción: <span class="required">*</span></label>
+                                                  <input type="text" id="descripcion" name="descripcion" required="required" class="form-control ">
+                                            </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                            <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Usuario: <span class="required">*</span></label>
+                                                <select name="usuario" id="usuario" required="true" class="form-control">      
+                                                    {% for i in usuarios %}
+                                                      {% if usuario %}
+                                                              {% if i.id == usuario %}
+                                                                  <option value="{{i.id}}" selected="">{{i}}</option>
+                                                              {% else %}
+                                                                  <option value="{{i.id}}">{{i}}</option>
+                                                              {% endif %}
+                                                      {% else %}
+                                                              <option value="{{i.id}}">{{i}}</option>
+                                                      {% endif%}
+                                                  {% endfor %}    
+                                                </select>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Cliente: <span class="required">*</span></label>
+                                                <select name="cliente" id="cliente" required="true" class="form-control">      
+                                                    {% for i in clientes %}
+                                                      {% if cliente %}
+                                                              {% if i.id == cliente %}
+                                                                  <option value="{{i.id}}" selected="">{{i}}</option>
+                                                              {% else %}
+                                                                  <option value="{{i.id}}">{{i}}</option>
+                                                              {% endif %}
+                                                      {% else %}
+                                                              <option value="{{i.id}}">{{i}}</option>
+                                                      {% endif%}
+                                                  {% endfor %}    
+                                                </select>
+                                            </div>
+                                      </div>
+                                        <div class="col-md-4">
+                                            <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Status: <span class="required">*</span></label>
+                                                <select name="status" id="status" required="true" class="form-control">      
+                                                    {% for i in status %}
+                                                      {% if statu %}
+                                                              {% if i.id == statu %}
+                                                                  <option value="{{i.id}}" selected="">{{i}}</option>
+                                                              {% else %}
+                                                                  <option value="{{i.id}}">{{i}}</option>
+                                                              {% endif %}
+                                                      {% else %}
+                                                              <option value="{{i.id}}">{{i}}</option>
+                                                      {% endif%}
+                                                  {% endfor %}    
+                                                </select>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                            <div class="item form-group">
+                                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Sucursal: <span class="required">*</span></label>
+                                                <select name="sucursal" id="sucursal" required="true" class="form-control">      
+                                                    {% for i in sucursales %}
+                                                      {% if sucursal %}
+                                                              {% if i.id == sucursal %}
+                                                                  <option value="{{i.id}}" selected="">{{i}}</option>
+                                                              {% else %}
+                                                                  <option value="{{i.id}}">{{i}}</option>
+                                                              {% endif %}
+                                                      {% else %}
+                                                              <option value="{{i.id}}">{{i}}</option>
+                                                      {% endif%}
+                                                  {% endfor %}    
+                                                </select>
+                                            </div>
+                                      </div>
+                                    </div> 
+                                    <br>
+
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                          <div class="item form-group">
+                                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Fecha Límite: <span class="required">*</span></label>
+                                            <div class='input-group date' id='datetimepicker7' >
+                                                <span class="input-group-addon btn-info" style="color: white !important">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                                <span class="input-group-addon btn-danger" style="color: white !important">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </span>
+                                                <input type='text' class="form-control" id='fecha_limite' name='fecha_limite'  data-rule-required="true" />                                 
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group" >
+                                                
+                                            </div>                 
+                                        </div>
+                                    </div> 
+                                    <br>
+                                    <div class="pull-right">
+                                  <button type="submit" class="btn btn-success">Guardar</button>
+                              </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+    <script src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+    <script src="{% static 'build/js/custom.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'js/axios.min.js' %}"></script>
+    <script src="{% static "plugins/datetime/bootstrap-datetimepicker.js" %}"></script>
+
+
+    <script type="text/javascript">
+
+      $('#datetimepicker7').datetimepicker({
+          minView: 2,
+          autoclose: true,
+          startView: 2,
+          //format: 'yyyy-mm-dd',
+          format: 'dd-mm-yyyy',
+      });
+        
+
+
+    </script>
+  </body>
+</html>

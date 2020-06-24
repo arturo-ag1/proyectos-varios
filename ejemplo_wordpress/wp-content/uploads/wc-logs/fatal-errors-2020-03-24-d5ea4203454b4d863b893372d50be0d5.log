@@ -1,0 +1,20 @@
+2020-03-24T17:58:26+00:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 77
+
+2020-03-24T20:00:32+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/rest-api/class-wp-rest-server.php en la línea 759
+
+2020-03-24T20:00:32+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/rest-api/class-wp-rest-server.php en la línea 759
+
+2020-03-24T20:00:32+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/rest-api/class-wp-rest-server.php en la línea 746
+
+2020-03-24T20:04:36+00:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 272
+
+2020-03-24T20:04:56+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 758143802
+
+2020-03-24T20:04:56+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 281
+
+2020-03-24T20:06:40+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/rest-api/class-wp-rest-server.php en la línea 759
+
+2020-03-24T20:06:49+00:00 CRITICAL Out of memory (allocated 8388608) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/plugin.php en la línea 758143802
+
+2020-03-24T20:06:51+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/class-wp-hook.php en la línea 272
+

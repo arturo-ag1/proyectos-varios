@@ -1,0 +1,2 @@
+2020-04-02T18:48:05+00:00 CRITICAL Out of memory (allocated 8388608) (tried to allocate 20480 bytes) en /var/www/html/wp-includes/rest-api/class-wp-rest-server.php en la línea 746
+

@@ -1,0 +1,4 @@
+2020-03-26T18:05:48+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 163840 bytes) en /var/www/html/wp-includes/pomo/mo.php en la línea 297
+
+2020-03-26T18:05:48+00:00 CRITICAL Out of memory (allocated 18874368) (tried to allocate 135168 bytes) en /var/www/html/wp-includes/pomo/streams.php en la línea 113
+
